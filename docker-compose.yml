@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: tech_events_db
+    environment:
+      POSTGRES_DB: tech_events
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/lib/postgresql/data/pg:/data/postgres
+    networks:
+      - tech_events_network
+
+networks:
+  tech_events_network:

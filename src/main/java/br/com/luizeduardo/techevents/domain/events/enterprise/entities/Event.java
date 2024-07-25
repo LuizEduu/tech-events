@@ -30,4 +30,6 @@ public class Event {
 	private Boolean remote;
 
 	private Instant date;
+
+	private Instant createdAt;
 }

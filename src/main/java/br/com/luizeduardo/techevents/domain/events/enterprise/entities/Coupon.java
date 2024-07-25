@@ -12,10 +12,11 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 public class Coupon {
-
 	@Id
 	@GeneratedValue
 	private UUID id;
+
+	private String code;
 
 	private Integer discount;
 
@@ -24,4 +25,6 @@ public class Coupon {
 	@ManyToOne
 	@JoinColumn(name = "event_id")
 	private Event event;
+
+	private Instant createdAt;
 }
